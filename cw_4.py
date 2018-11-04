@@ -1,4 +1,4 @@
-from vrp.io.reader import read_data, get_node_info
+from vrp.io.reader import read_data_goc, get_node_info
 from vrp.util.info import generate_seq_info
 from vrp.io.result import save_result
 from vrp.construction import merge_saving_value_pairs
@@ -12,7 +12,7 @@ data_set_num = 5
 merge_seq_each_time = 5
 time_sorted_limit = False   # False for greedy matching
 
-ds, tm, delivery, pickup, charge, position, ntj = read_data(data_set_num)
+ds, tm, delivery, pickup, charge, position, ntj = read_data_goc(data_set_num)
 delivery = get_node_info(delivery)
 pickup = get_node_info(pickup)
 charge = get_node_info(charge, is_charge=True)

@@ -1,13 +1,13 @@
 from vrp.io.result import read_solution, save_result
 from vrp.util.info import generate_seq_info
-from vrp.io.reader import read_data, get_node_info
+from vrp.io.reader import read_data_goc, get_node_info
 from vrp.improvement.intra_route import two_opt
 from vrp.common.model import Param
 
 data_set_num = 5
 route_dict = read_solution(data_set_num)
 
-ds, tm, delivery, pickup, charge, position, ntj = read_data(data_set_num)
+ds, tm, delivery, pickup, charge, position, ntj = read_data_goc(data_set_num)
 delivery = get_node_info(delivery)
 pickup = get_node_info(pickup)
 charge = get_node_info(charge, is_charge=True)

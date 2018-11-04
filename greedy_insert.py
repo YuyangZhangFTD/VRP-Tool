@@ -1,4 +1,4 @@
-from vrp.io.reader import read_data, get_node_info
+from vrp.io.reader import read_data_goc, get_node_info
 from vrp.construction import saving_value_construct
 from vrp.common.model import SeqInfo, Param
 from vrp.util.neighborhhod import get_neighborhood_dict
@@ -16,7 +16,7 @@ neighborhood_number = 10
 
 # =========================== read data =============================
 # ntj: node_type_judgement
-ds, tm, delivery, pickup, charge, position, ntj = read_data(data_set_num)
+ds, tm, delivery, pickup, charge, position, ntj = read_data_goc(data_set_num)
 delivery = get_node_info(delivery)
 pickup = get_node_info(pickup)
 charge = get_node_info(charge, is_charge=True)
